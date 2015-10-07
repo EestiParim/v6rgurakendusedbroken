@@ -1,0 +1,77 @@
+.gameStage {
+	margin: 0 auto;
+	display: block;
+	width: 500px;
+	text-align: center;
+}
+
+#pendulum {
+	position: relative;
+	margin: 0 auto;
+	width: 50px;
+	height: 300px;
+}
+
+#startAnimation {
+	margin-bottom: 20px;
+}
+.animated-pendulum {
+	-moz-animation-name: pendulum;
+	-webkit-animation-name: pendulum;
+	animation-name: pendulum;
+	/*** ÕIGE ALGUS ***/
+	/**/-moz-transform-origin: 50% 5px;
+	/**/-moz-animation-duration: 2s;
+	/**/-moz-animation-iteration-count: infinite;
+	/**/-webkit-transform-origin: 50% 5px;
+	/**/-webkit-animation-duration: 2s;
+	/**/-webkit-animation-iteration-count: infinite;
+	/**/transform-origin: 50% 5px;
+	/**/animation-duration: 2s;
+	/**/animation-iteration-count: infinite;
+	/*** ÕIGE LÕPP ***/
+}
+
+.rect {
+	background-color: #FFD700;
+	width: 10px;
+	height: 280px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.ball {
+	position: absolute;
+	bottom: 0;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: red;
+
+	/*** ÕIGE ALGUS ***/
+	/**/
+	background-image: -moz-radial-gradient(30px 30px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	/**/
+	background-image: -webkit-radial-gradient(30px 30px, circle cover, yellow, orange);
+	/**/
+	background-image: radial-gradient(30px 30px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	/*** ÕIGE LÕPP ***/
+}
+
+/*** ÕIGE ALGUS ***/
+/**/	@-moz-keyframes pendulum {
+/**/		from { -moz-transform: rotate(-25deg); }
+/**/		50%  { -moz-transform: rotate(25deg); }
+/**/		to   { -moz-transform: rotate(-25deg); }
+/**/	}
+/**/	@-webkit-keyframes pendulum {
+/**/		from { -webkit-transform: rotate(-25deg); }
+/**/		50%  { -webkit-transform: rotate(25deg); }
+/**/		to   { -webkit-transform: rotate(-25deg); }
+/**/	}
+/**/	@keyframes pendulum {
+/**/		from { transform: rotate(-25deg); }
+/**/		50%  { transform: rotate(25deg); }
+/**/		to   { transform: rotate(-25deg); }
+/**/	}
+/*** ÕIGE LÕPP ***/
